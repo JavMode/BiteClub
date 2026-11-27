@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiteClub · Pet Shop</title>
+  <meta name="description" content="BiteClub: alimento, juguetes, accesorios y servicios para tu mascota." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Barra superior -->
+  <div class="topbar">🚚 Envío gratis en compras mayores a $50 · Lun–Sáb 9:00–20:00</div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo"><span class="logo__icon">🐾</span> Bite<span>Club</span></a>
+      <nav class="nav" id="nav">
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="header__actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="pill">Nuevo · Colección de invierno 🧣</span>
+        <h1>Todo lo que tu mascota <em>ama</em>, en un solo lugar.</h1>
+        <p>Alimento premium, juguetes resistentes, accesorios con estilo y servicios de peluquería y veterinaria hechos con cariño.</p>
+        <div class="hero__cta">
+          <a href="#productos" class="btn btn--primary">Comprar ahora</a>
+          <a href="#servicios" class="btn btn--ghost">Reservar cita</a>
+        </div>
+        <ul class="hero__stats">
+          <li><strong>12k+</strong><span>clientes felices</span></li>
+          <li><strong>800+</strong><span>productos</span></li>
+          <li><strong>4.9★</strong><span>valoración</span></li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="hero__pet hero__pet--main">🐶</div>
+        <div class="hero__pet hero__pet--cat">🐱</div>
+        <div class="hero__pet hero__pet--bone">🦴</div>
+        <div class="hero__badge">-20% <small>en alimento</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="section" id="categorias">
+    <div class="container">
+      <div class="section__head">
+        <h2>Compra por mascota</h2>
+        <p>Elige a tu compañero y te mostramos lo mejor para él.</p>
+      </div>
+      <div class="categories" id="categories">
+        <button class="category is-active" data-filter="todos"><span>🐾</span>Todos</button>
+        <button class="category" data-filter="perro"><span>🐕</span>Perros</button>
+        <button class="category" data-filter="gato"><span>🐈</span>Gatos</button>
+        <button class="category" data-filter="ave"><span>🦜</span>Aves</button>
+        <button class="category" data-filter="pez"><span>🐠</span>Peces</button>
+        <button class="category" data-filter="roedor"><span>🐹</span>Roedores</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section class="section section--tint" id="productos">
+    <div class="container">
+      <div class="section__head section__head--row">
+        <div>
+          <h2>Productos destacados</h2>
+          <p>Seleccionados por nuestro equipo y aprobados por sus mascotas.</p>
+        </div>
+        <label class="sort">
+          Ordenar:
+          <select id="sortSelect">
+            <option value="popular">Más populares</option>
+            <option value="asc">Precio: menor a mayor</option>
+            <option value="desc">Precio: mayor a menor</option>
+          </select>
+        </label>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Promo -->
+  <section class="section">
+    <div class="container">
+      <div class="promo">
+        <div>
+          <h2>Club de Mordiscos 🦴</h2>
+          <p>Suscríbete al envío mensual de alimento y ahorra un 15% para siempre. Cancela cuando quieras.</p>
+        </div>
+        <a href="#contacto" class="btn btn--light">Unirme al club</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section__head">
+        <h2>Nuestros servicios</h2>
+        <p>Profesionales certificados que tratan a tu mascota como de la familia.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="service__icon">✂️</div>
+          <h3>Peluquería</h3>
+          <p>Baño, corte, limpieza de oídos y corte de uñas con productos hipoalergénicos.</p>
+          <span class="service__price">desde $25</span>
+        </article>
+        <article class="service">
+          <div class="service__icon">🩺</div>
+          <h3>Veterinaria</h3>
+          <p>Consultas generales, vacunación, desparasitación y chequeos anuales.</p>
+          <span class="service__price">desde $35</span>
+        </article>
+        <article class="service">
+          <div class="service__icon">🏡</div>
+          <h3>Guardería</h3>
+          <p>Cuidado de día y hospedaje con juegos, paseos y cámara en vivo.</p>
+          <span class="service__price">desde $20/día</span>
+        </article>
+        <article class="service">
+          <div class="service__icon">🎓</div>
+          <h3>Adiestramiento</h3>
+          <p>Clases de obediencia básica y socialización para cachorros y adultos.</p>
+          <span class="service__price">desde $40</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opiniones -->
+  <section class="section section--tint" id="opiniones">
+    <div class="container">
+      <div class="section__head">
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="reviews">
+        <blockquote class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Luna sale de la peluquería feliz y oliendo increíble. La atención es de 10.”</p>
+          <footer><span class="avatar">🐩</span> Mariana · dueña de Luna</footer>
+        </blockquote>
+        <blockquote class="review">
+          <div class="stars">★★★★★</div>
+          <p>“El envío llega rapidísimo y el alimento premium le cambió el pelaje a mi gato.”</p>
+          <footer><span class="avatar">🐈‍⬛</span> Diego · dueño de Salem</footer>
+        </blockquote>
+        <blockquote class="review">
+          <div class="stars">★★★★☆</div>
+          <p>“Gran variedad para aves, difícil de encontrar en otros lados. ¡Recomendado!”</p>
+          <footer><span class="avatar">🦜</span> Sofía · dueña de Kiwi</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto / Newsletter -->
+  <section class="section" id="contacto">
+    <div class="container contact">
+      <div>
+        <h2>Visítanos o escríbenos</h2>
+        <ul class="contact__list">
+          <li>📍 Av. Siempre Viva 742, Ciudad</li>
+          <li>📞 +1 (555) 123-4567</li>
+          <li>✉️ hola@biteclub.pet</li>
+          <li>🕘 Lun–Sáb 9:00–20:00 · Dom 10:00–14:00</li>
+        </ul>
+      </div>
+      <form class="newsletter" id="newsletterForm">
+        <h3>Recibe ofertas y consejos 💌</h3>
+        <p>Un correo al mes. Nada de spam, palabra de perro.</p>
+        <div class="newsletter__row">
+          <input type="email" id="emailInput" placeholder="tu@correo.com" required />
+          <button class="btn btn--primary" type="submit">Suscribirme</button>
+        </div>
+        <p class="newsletter__msg" id="newsletterMsg" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="logo logo--light"><span class="logo__icon">🐾</span> Bite<span>Club</span></a>
+      <p>© <span id="year"></span> BiteClub Pet Shop. Hecho con 🧡 para peludos, plumíferos y escamosos.</p>
+    </div>
+  </footer>
+
+  <!-- Carrito -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart" id="cart" aria-label="Carrito de compras">
+    <div class="cart__head">
+      <h3>Tu carrito</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <ul class="cart__items" id="cartItems"></ul>
+    <p class="cart__empty" id="cartEmpty">Tu carrito está vacío 🐾</p>
+    <div class="cart__foot">
+      <div class="cart__total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
